@@ -23,7 +23,7 @@ class BrainTests: XCTestCase {
         let multiple = 3
         let factor = 3
         // When
-        let result = sut.is(multiple, of: factor)
+        let result = sut.isMultiple(multiple, of: factor)
         // Then
         XCTAssertTrue(result, "\(multiple) is not a multiple of \(factor)")
     }

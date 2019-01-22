@@ -14,6 +14,7 @@
 		ED6D4B7E21F7B48E00F847FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6D4B7C21F7B48E00F847FF /* LaunchScreen.storyboard */; };
 		ED6D4B9421F7B48F00F847FF /* FizzBuzzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4B9321F7B48F00F847FF /* FizzBuzzUITests.swift */; };
 		ED6D4BA421F7B59300F847FF /* BrainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4BA321F7B59300F847FF /* BrainTests.swift */; };
+		ED6D4BAC21F7BE6A00F847FF /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4BAB21F7BE6A00F847FF /* Brain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		ED6D4B9321F7B48F00F847FF /* FizzBuzzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FizzBuzzUITests.swift; sourceTree = "<group>"; };
 		ED6D4B9521F7B48F00F847FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED6D4BA321F7B59300F847FF /* BrainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainTests.swift; sourceTree = "<group>"; };
+		ED6D4BAB21F7BE6A00F847FF /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		ED6D4B7221F7B48900F847FF /* FizzBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				ED6D4BAA21F7BE4F00F847FF /* Logic */,
 				ED6D4B7321F7B48900F847FF /* AppDelegate.swift */,
 				ED6D4B7521F7B48900F847FF /* ViewController.swift */,
 				ED6D4B7721F7B48900F847FF /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				ED6D4B9521F7B48F00F847FF /* Info.plist */,
 			);
 			path = FizzBuzzUITests;
+			sourceTree = "<group>";
+		};
+		ED6D4BAA21F7BE4F00F847FF /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				ED6D4BAB21F7BE6A00F847FF /* Brain.swift */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED6D4B7621F7B48900F847FF /* ViewController.swift in Sources */,
+				ED6D4BAC21F7BE6A00F847FF /* Brain.swift in Sources */,
 				ED6D4B7421F7B48900F847FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
