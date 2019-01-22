@@ -102,5 +102,13 @@ class BrainTests: XCTestCase {
         
         XCTAssertEqual(result, "Buzz", "\(multiple) is a multiple of 5 and should say Buzz, says \(result)")
     }
+    
+    func testBrainSaysFizzBuzzWhenMultipleOfThreeAndFive() {
+        let multiple = 15
+        
+        let result = sut.check(3, 5)
+        
+        XCTAssertEqual(result, "FizzBuzz", "\(multiple) is a multiple of 3 and 5, should say FizzBuzz, says \(result)")
+    }
 
 }
