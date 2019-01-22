@@ -12,12 +12,13 @@ struct Brain {
     
     // MARK: - Public API
     func isMultiple(_ multiple: Int, of factor: Int, and secondFactor: Int = 1) -> Bool {
-        return (multiple % factor) == 0
+        return (multiple % (factor * secondFactor)) == 0
     }
     
     func playFizzBuzz(with multiple: Int) -> String {
-        if isMultiple(multiple, of: 3, and: 5)
-        if isMultiple(multiple, of: 3) {
+        if isMultiple(multiple, of: 3, and: 5) {
+            return "FizzBuzz"
+        } else if isMultiple(multiple, of: 3) {
             return "Fizz"
         } else if isMultiple(multiple, of: 5) {
             return "Buzz"

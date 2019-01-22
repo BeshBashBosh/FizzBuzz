@@ -90,7 +90,7 @@ class BrainTests: XCTestCase {
     func testBrainSaysFizzWhenMultipleOfThree() {
         let multiple = 3
         
-        let result = sut.playFizzBuzz(multiple)
+        let result = sut.playFizzBuzz(with: multiple)
         
         XCTAssertEqual(result, "Fizz", "\(multiple) is a multiple of 3 and should say Fizz, says \(result)")
     }
@@ -98,7 +98,7 @@ class BrainTests: XCTestCase {
     func testBrainSaysBuzzWhenMultipleOfFive() {
         let multiple = 5
         
-        let result = sut.playFizzBuzz(multiple)
+        let result = sut.playFizzBuzz(with: multiple)
         
         XCTAssertEqual(result, "Buzz", "\(multiple) is a multiple of 5 and should say Buzz, says \(result)")
     }
@@ -106,7 +106,7 @@ class BrainTests: XCTestCase {
     func testBrainSaysFizzBuzzWhenMultipleOfThreeAndFive() {
         let multiple = 15
         
-        let result = sut.playFizzBuzz(multiple)
+        let result = sut.playFizzBuzz(with: multiple)
         
         XCTAssertEqual(result, "FizzBuzz", "\(multiple) is a multiple of 3 and 5, should say FizzBuzz, says \(result)")
     }
