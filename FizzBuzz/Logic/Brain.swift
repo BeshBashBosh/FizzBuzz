@@ -16,6 +16,12 @@ struct Brain {
     }
     
     func check(_ multiple: Int) -> String {
-        return "Fizz"
+        if isMultiple(multiple, of: 3) {
+            return "Fizz"
+        } else if isMultiple(multiple, of: 5) {
+            return "Buzz"
+        } else {
+            return ""
+        }
     }
 }
