@@ -11,6 +11,8 @@ import XCTest
 
 class BrainTests: XCTestCase {
 
+    let sut: Brain = Brain()
+    
     override func setUp() {
     }
 
@@ -19,7 +21,6 @@ class BrainTests: XCTestCase {
 
     func testThreeIsMultipleOfThree() {
         // Given
-        let sut = Brain()
         let multiple = 3
         let factor = 3
         // When
@@ -30,7 +31,6 @@ class BrainTests: XCTestCase {
     
     func testFiveIsNotMultipleOfThree() {
         // Given
-        let sut = Brain()
         let multiple = 5
         let factor = 3
         // When
@@ -40,7 +40,6 @@ class BrainTests: XCTestCase {
     }
     
     func test30IsMultipleOfFive() {
-        let sut = Brain()
         let multiple = 30
         let factor = 3
         
@@ -50,7 +49,6 @@ class BrainTests: XCTestCase {
     }
     
     func test1723IsNotMultipleOfFive() {
-        let sut = Brain()
         let multiple = 1723
         let factor = 5
         
