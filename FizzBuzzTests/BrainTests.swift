@@ -86,5 +86,13 @@ class BrainTests: XCTestCase {
         
         XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor1) and \(factor2)")
     }
+    
+    func testBrainSaysFizzWhenMultipleOfThree() {
+        let multiple = 3
+        
+        let result = sut.check(3)
+        
+        XCTAssertEqual(result, "Fizz", "\(multiple) is a multiple of 3 and should say Fizz, says \(result)")
+    }
 
 }
