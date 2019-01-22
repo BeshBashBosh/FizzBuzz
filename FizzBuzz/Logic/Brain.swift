@@ -11,7 +11,12 @@ import Foundation
 struct Brain {
     
     private let factor: Int
-    private let secondFactor: Int = 1
+    private let secondFactor: Int
+    
+    init(factor: Int, secondFactor: Int = 1) {
+        self.factor = factor
+        self.secondFactor = secondFactor
+    }
     
     // MARK: - Public API
     func isMultiple(_ multiple: Int) -> Bool {
@@ -19,11 +24,14 @@ struct Brain {
     }
     
     func playFizzBuzz(with multiple: Int) -> String {
-        if isMultiple(multiple) && (self.secondFactor != 1) {
+        if self.factor == self.self.secondFactor {
+            return String(multiple)
+        }
+        if isMultiple(multiple) && (self.factor != 1 && self.secondFactor != 1) {
             return "FizzBuzz"
-        } else if isMultiple(multiple) {
+        } else if isMultiple(multiple) && self.factor != 1 {
             return "Fizz"
-        } else if isMultiple(multiple) {
+        } else if isMultiple(multiple) && self.secondFactor != 1 {
             return "Buzz"
         } else {
             return String(multiple)
