@@ -11,7 +11,7 @@ import Foundation
 struct Brain {
     
     // MARK: - Public API
-    func isMultiple(_ multiple: Int, of factor: Int) -> Bool {
+    func isMultiple(_ multiple: Int, of factor: Int, and secondFactor: Int) -> Bool {
         return (multiple % factor) == 0
     }
 }
