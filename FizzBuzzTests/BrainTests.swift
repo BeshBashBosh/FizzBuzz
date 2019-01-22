@@ -56,5 +56,35 @@ class BrainTests: XCTestCase {
         
         XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor)")
     }
+    
+    func test30IsMultipleOfThreeAndFive() {
+        let multiple = 30
+        let factor1 = 3
+        let factor2 = 5
+        
+        let result = sut.isMultiple(multiple, of: factor1, and: factor2)
+        
+        XCTAssertTrue(result, "\(multiple) is a multiple of \(factor1) and \(factor2)")
+    }
+    
+    func test30IsMultipleOfFiveAndThree() {
+        let multiple = 30
+        let factor1 = 5
+        let factor2 = 3
+        
+        let result = sut.isMultiple(multiple, of: factor1, and: factor2)
+        
+        XCTAssertTrue(result, "\(multiple) is a multiple of \(factor1) and \(factor2)")
+    }
+    
+    func testEightIsNotMultipleOfThreeAndFive() {
+        let multiple = 8
+        let factor1 = 3
+        let factor2 = 5
+        
+        let result = sut.isMultiple(multiple, of: factor1, and: factor2)
+        
+        XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor1) and \(factor2)")
+    }
 
 }
