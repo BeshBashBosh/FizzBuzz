@@ -15,7 +15,8 @@ struct Brain {
         return (multiple % factor) == 0
     }
     
-    func check(_ multiple: Int) -> String {
+    func playFizzBuzz(with multiple: Int) -> String {
+        if isMultiple(multiple, of: 3, and: 5)
         if isMultiple(multiple, of: 3) {
             return "Fizz"
         } else if isMultiple(multiple, of: 5) {
