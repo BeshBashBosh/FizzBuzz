@@ -17,5 +17,13 @@ class BrainTests: XCTestCase {
     override func tearDown() {
     }
 
+    func testThreeIsMultipleOfThree() {
+        // Given
+        let sut = Brain()
+        // When
+        let result = sut.isMultipleOfThree(3)
+        // Then
+        XCTAssertTrue(result, "3 is not a multiple of 3")
+    }
 
 }
