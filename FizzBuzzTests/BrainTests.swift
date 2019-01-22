@@ -20,10 +20,12 @@ class BrainTests: XCTestCase {
     func testThreeIsMultipleOfThree() {
         // Given
         let sut = Brain()
+        let multiple = 3
+        let factor = 3
         // When
-        let result = sut.isMultipleOfThree(3)
+        let result = sut.is(multiple, of: factor)
         // Then
-        XCTAssertTrue(result, "3 is not a multiple of 3")
+        XCTAssertTrue(result, "\(multiple) is not a multiple of \(factor)")
     }
 
 }
