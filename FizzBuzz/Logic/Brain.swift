@@ -14,4 +14,8 @@ struct Brain {
     func isMultiple(_ multiple: Int, of factor: Int, and secondFactor: Int = 1) -> Bool {
         return (multiple % factor) == 0
     }
+    
+    func check(_ multiple: Int) -> String {
+        return "Fizz"
+    }
 }
