@@ -110,5 +110,13 @@ class BrainTests: XCTestCase {
         
         XCTAssertEqual(result, "FizzBuzz", "\(multiple) is a multiple of 3 and 5, should say FizzBuzz, says \(result)")
     }
+    
+    func testBrainSaysEmptyStringWhenNotAMultipleOfThreeOrFive() {
+        let multiple = 16
+        
+        let result = sut.playFizzBuzz(with: multiple)
+        
+        XCTAssertEqual(result, "", "\(multiple) is not a multiple of 3 or 5, should say empty string, says \(result)")
+    }
 
 }
