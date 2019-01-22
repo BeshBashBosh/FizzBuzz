@@ -23,7 +23,7 @@ struct Brain {
         } else if isMultiple(multiple, of: 5) {
             return "Buzz"
         } else {
-            return ""
+            return String(multiple)
         }
     }
 }
