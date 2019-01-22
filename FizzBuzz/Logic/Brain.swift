@@ -12,10 +12,6 @@ struct Brain {
     
     // MARK: - Public API
     func isMultiple(_ multiple: Int, of factor: Int) -> Bool {
-        if (multiple % factor) == 0 {
-            return true
-        }
-        
-        return false
+        return (multiple % factor) == 0
     }
 }
