@@ -10,17 +10,20 @@ import Foundation
 
 struct Brain {
     
+    private let factor: Int
+    private let secondFactor: Int = 1
+    
     // MARK: - Public API
-    func isMultiple(_ multiple: Int, of factor: Int, and secondFactor: Int = 1) -> Bool {
-        return (multiple % (factor * secondFactor)) == 0
+    func isMultiple(_ multiple: Int) -> Bool {
+        return (multiple % (self.factor * self.secondFactor)) == 0
     }
     
     func playFizzBuzz(with multiple: Int) -> String {
-        if isMultiple(multiple, of: 3, and: 5) {
+        if isMultiple(multiple) && (self.secondFactor != 1) {
             return "FizzBuzz"
-        } else if isMultiple(multiple, of: 3) {
+        } else if isMultiple(multiple) {
             return "Fizz"
-        } else if isMultiple(multiple, of: 5) {
+        } else if isMultiple(multiple) {
             return "Buzz"
         } else {
             return String(multiple)
