@@ -11,7 +11,7 @@ import XCTest
 
 class GameTests: XCTestCase {
 
-    let sut: Game = Game()
+    var sut: Game = Game()
     
     override func setUp() {
     }
@@ -24,6 +24,16 @@ class GameTests: XCTestCase {
         let score = sut.score
         
         XCTAssertEqual(score, 0, "Game score should start at 0. Started at \(score)")
+    }
+    
+    func testGameScoreIncrementsOnPlaying() {
+        let scoreBeforePlay = sut.score
+        
+        sut.play()
+        let scoreAfterPlay = sut.score
+        
+        XCTAssertEqual(scoreAfterPlay, scoreBeforePlay + 1, "Score before playing is \(scoreBeforePlay). Score after play should be \(scoreBeforePlay + 1), score is \(scoreAfterPlay)")
+        
     }
     
 }

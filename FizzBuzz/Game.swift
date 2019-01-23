@@ -12,4 +12,8 @@ struct Game {
     
     var score: Int = 0
     
+    mutating func play() {
+        self.score += 1
+    }
+    
 }
