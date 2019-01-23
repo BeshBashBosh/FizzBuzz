@@ -46,4 +46,12 @@ class GameTests: XCTestCase {
         XCTAssertEqual(scoreAfterPlayingTwice, scoreAtBeginning + 2, "Score before playing is \(scoreAtBeginning). Score after playing twice should be \(scoreAtBeginning + 2), score is \(scoreAfterPlayingTwice)")
     }
     
+    func testIfPlayerMoveOfFizzIsCorrectWhenScoreIsThree() {
+        sut.score = 2
+        
+        let result = sut.play(move: "Fizz")
+        
+        XCTAssertEqual(result, true)
+    }
+    
 }
