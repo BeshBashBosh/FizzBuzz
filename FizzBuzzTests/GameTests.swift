@@ -29,7 +29,7 @@ class GameTests: XCTestCase {
     func testGameScoreIncrementsOnPlaying() {
         let scoreBeforePlay = sut.score
         
-        sut.play()
+        _ = sut.play(move: "1")
         let scoreAfterPlay = sut.score
         
         XCTAssertEqual(scoreAfterPlay, scoreBeforePlay + 1, "Score before playing is \(scoreBeforePlay). Score after play should be \(scoreBeforePlay + 1), score is \(scoreAfterPlay)")
@@ -39,8 +39,8 @@ class GameTests: XCTestCase {
     func testGameScoreEqual2OnPlayingTwice() {
         let scoreAtBeginning = sut.score
         
-        sut.play()
-        sut.play()
+        _ = sut.play(move: "1")
+        _ = sut.play(move: "1")
         let scoreAfterPlayingTwice = sut.score
         
         XCTAssertEqual(scoreAfterPlayingTwice, scoreAtBeginning + 2, "Score before playing is \(scoreAtBeginning). Score after playing twice should be \(scoreAtBeginning + 2), score is \(scoreAfterPlayingTwice)")

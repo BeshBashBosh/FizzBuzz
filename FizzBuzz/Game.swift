@@ -12,8 +12,9 @@ struct Game {
     
     var score: Int = 0
     
-    mutating func play() {
+    mutating func play(move: String) -> Bool {
         self.score += 1
+        return true
     }
     
 }
