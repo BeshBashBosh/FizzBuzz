@@ -11,10 +11,17 @@ import Foundation
 struct Game {
     
     var score: Int = 0
+    private let brain: Brain = Brain(factor: 3, secondFactor: 5)
     
     mutating func play(move: String) -> Bool {
         self.score += 1
-        return true
+        let correctMove = brain.playFizzBuzz(with: self.score)
+        
+        if move == correctMove {
+            return true
+        } else {
+            return false
+        }
     }
     
 }
