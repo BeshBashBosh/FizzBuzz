@@ -46,12 +46,20 @@ class GameTests: XCTestCase {
         XCTAssertEqual(scoreAfterPlayingTwice, scoreAtBeginning + 2, "Score before playing is \(scoreAtBeginning). Score after playing twice should be \(scoreAtBeginning + 2), score is \(scoreAfterPlayingTwice)")
     }
     
-    func testIfPlayerMoveOfFizzIsCorrectWhenScoreIsThree() {
+    func testIfPlayerMoveOfFizzIsCorrectWhenNextScoreIsThreeOnPlay() {
         sut.score = 2
         
         let result = sut.play(move: "Fizz")
         
-        XCTAssertEqual(result, true)
+        XCTAssertEqual(result, true, "On playing Fizz when next score will be \(sut.score) should be correct, result is \(result)")
+    }
+    
+    func testIfPlayerMoveOfFizzReturnsFalseWhenNextScoreIsTwoOnPlay() {
+        sut.score = 1
+        
+        let result = sut.play(move: "Fizz")
+        
+        XCTAssertEqual(result, false, "On playing Fizz when next score will be \(sut.score) should be incorrect, result is \(result)")
     }
     
 }
