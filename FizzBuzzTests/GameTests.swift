@@ -23,7 +23,7 @@ class GameTests: XCTestCase {
         
         let score = sut.score
         
-        XCTAssertEqual(score, 1, "Game score should start at 0. Started at \(score)")
+        XCTAssertEqual(score, 0, "Game score should start at 0. Started at \(score)")
     }
     
 }

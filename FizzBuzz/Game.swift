@@ -10,4 +10,6 @@ import Foundation
 
 struct Game {
     
+    var score: Int = 0
+    
 }
