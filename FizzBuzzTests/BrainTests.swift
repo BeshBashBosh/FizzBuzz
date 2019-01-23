@@ -16,95 +16,20 @@ class BrainTests: XCTestCase {
 
     override func tearDown() {
     }
-
-    func testThreeIsMultipleOfThree() {
-        // Given
-        let factor = 3
-        let sut: Brain = Brain(factor: factor)
-        let multiple = 3
-        // When
-        let result = sut.isMultiple(multiple)
-        // Then
-        XCTAssertTrue(result, "\(multiple) is not a multiple of \(factor)")
-    }
     
-    func testFiveIsNotMultipleOfThree() {
-        // Given
-        let factor = 3
-        let sut = Brain(factor: factor)
-        let multiple = 5
-        // When
-        let result = sut.isMultiple(multiple)
-        // Then
-        XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor)")
-    }
-    
-    func test30IsMultipleOfFive() {
-        let multiple = 30
-        let factor = 5
-        let sut = Brain(factor: factor)
-        
-        let result = sut.isMultiple(multiple)
-        
-        XCTAssertTrue(result, "\(multiple) is a multiple of \(factor)")
-    }
-    
-    func test1723IsNotMultipleOfFive() {
-                let multiple = 1723
-        let factor = 5
-        let sut = Brain(factor: factor)
-        
-        let result = sut.isMultiple(multiple)
-        
-        XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor)")
-    }
-    
-    func test30IsMultipleOfThreeAndFive() {
-        let multiple = 30
-        let factor1 = 3
-        let factor2 = 5
-        let sut = Brain(factor: factor1, secondFactor: factor2)
-        
-        let result = sut.isMultiple(multiple)
-        
-        XCTAssertTrue(result, "\(multiple) is a multiple of \(factor1) and \(factor2)")
-    }
-    
-    func test30IsMultipleOfFiveAndThree() {
-        let multiple = 30
-        let factor1 = 5
-        let factor2 = 3
-        let sut = Brain(factor: factor1, secondFactor: factor2)
-        
-        let result = sut.isMultiple(multiple)
-        
-        XCTAssertTrue(result, "\(multiple) is a multiple of \(factor1) and \(factor2)")
-    }
-    
-    func testEightIsNotMultipleOfThreeAndFive() {
-        let multiple = 8
-        let factor1 = 3
-        let factor2 = 5
-        let sut = Brain(factor: factor1, secondFactor: factor2)
-        
-        let result = sut.isMultiple(multiple)
-        
-        XCTAssertFalse(result, "\(multiple) is not a multiple of \(factor1) and \(factor2)")
-    }
-    
-    func testBrainSaysFizzWhenThreeIsAMultipleOfFirstFactor() {
+    func testBrainSaysFizzWhenThreeIsOnlyAMultipleOfFirstFactor() {
         let multiple = 3
         let factor1 = 3
-        let factor2 = 1
+        let factor2 = 2
         let sut = Brain(factor: factor1, secondFactor: factor2)
         
         let result = sut.playFizzBuzz(with: multiple)
         XCTAssertEqual(result, "Fizz", "\(multiple) is a multiple of firstFactor \(factor1) and should say Fizz, says \(result)")
     }
     
-    func testBrainSaysBuzzWhenThreeIsAMultipleOfSecondFactor() {
+    func testBrainSaysBuzzWhenThreeIsOnlyAMultipleOfSecondFactor() {
         let multiple = 3
-        let factor1 = 1
+        let factor1 = 2
         let factor2 = 3
         let sut = Brain(factor: factor1, secondFactor: factor2)
         

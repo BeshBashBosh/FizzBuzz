@@ -18,23 +18,20 @@ struct Brain {
         self.secondFactor = secondFactor
     }
     
-    // MARK: - Public API
-    func isMultiple(_ multiple: Int) -> Bool {
-        return (multiple % (self.factor * self.secondFactor)) == 0
-    }
-    
-    func playFizzBuzz(with multiple: Int) -> String {
-        if self.factor == self.self.secondFactor {
-            return String(multiple)
+    // MARK: - Public API    
+    func playFizzBuzz(with value: Int) -> String {
+        if self.factor == self.secondFactor {
+            return String(value)
         }
-        if isMultiple(multiple) && (self.factor != 1 && self.secondFactor != 1) {
+        
+        if value.isMultiple(of: self.factor) && value.isMultiple(of: self.secondFactor) {
             return "FizzBuzz"
-        } else if isMultiple(multiple) && self.factor != 1 {
+        } else if value.isMultiple(of: self.factor) {
             return "Fizz"
-        } else if isMultiple(multiple) && self.secondFactor != 1 {
+        } else if value.isMultiple(of: self.secondFactor) {
             return "Buzz"
         } else {
-            return String(multiple)
+            return String(value)
         }
     }
 }
