@@ -19,5 +19,11 @@ class GameTests: XCTestCase {
     override func tearDown() {
     }
 
+    func testGameScoreStartsAtZero() {
+        
+        let score = sut.score
+        
+        XCTAssertEqual(score, 1, "Game score should start at 0. Started at \(score)")
+    }
     
 }
