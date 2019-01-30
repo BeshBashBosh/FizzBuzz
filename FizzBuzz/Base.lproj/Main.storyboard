@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,11 +13,86 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FizzBuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-Ts-w7C">
+                                <rect key="frame" x="261" y="621" width="104" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleColor" red="0.57647058823529407" green="0.0" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vY6-yP-lIo">
+                                <rect key="frame" x="329" y="30" width="36" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pXI-5u-Lyo">
+                                <rect key="frame" x="40" y="196" width="295" height="295"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDQ-m5-v53">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.5" height="141.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="70"/>
+                                        <state key="normal" title="0" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPp-ZD-jJ6">
+                                        <rect key="frame" x="153.5" y="0.0" width="141.5" height="141.5"/>
+                                        <state key="normal" image="champagne" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euG-2V-btr">
+                                        <rect key="frame" x="153.5" y="153.5" width="141.5" height="141.5"/>
+                                        <state key="normal" image="space" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlf-MP-y0R">
+                                        <rect key="frame" x="0.0" y="153.5" width="141.5" height="141.5"/>
+                                        <state key="normal" image="lightning" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="pXI-5u-Lyo" secondAttribute="height" multiplier="1:1" id="1Jw-yL-sRk"/>
+                                    <constraint firstItem="zDQ-m5-v53" firstAttribute="top" secondItem="pXI-5u-Lyo" secondAttribute="top" id="2l4-gX-x6b"/>
+                                    <constraint firstAttribute="bottom" secondItem="euG-2V-btr" secondAttribute="bottom" id="C3e-LS-pCV"/>
+                                    <constraint firstItem="Hlf-MP-y0R" firstAttribute="height" secondItem="zDQ-m5-v53" secondAttribute="height" id="CIC-ks-kJz"/>
+                                    <constraint firstAttribute="trailing" secondItem="MPp-ZD-jJ6" secondAttribute="trailing" id="EMr-uL-Bed"/>
+                                    <constraint firstItem="zDQ-m5-v53" firstAttribute="leading" secondItem="pXI-5u-Lyo" secondAttribute="leading" id="Hmy-7q-a5d"/>
+                                    <constraint firstAttribute="trailing" secondItem="euG-2V-btr" secondAttribute="trailing" id="Kzb-qD-uu3"/>
+                                    <constraint firstItem="zDQ-m5-v53" firstAttribute="height" secondItem="pXI-5u-Lyo" secondAttribute="height" multiplier="0.48" id="MoO-aN-kgU"/>
+                                    <constraint firstItem="MPp-ZD-jJ6" firstAttribute="width" secondItem="zDQ-m5-v53" secondAttribute="width" id="VWf-LD-N1W"/>
+                                    <constraint firstItem="Hlf-MP-y0R" firstAttribute="leading" secondItem="pXI-5u-Lyo" secondAttribute="leading" id="WKH-eS-1jT"/>
+                                    <constraint firstItem="euG-2V-btr" firstAttribute="width" secondItem="zDQ-m5-v53" secondAttribute="width" id="ZFo-sg-Crf"/>
+                                    <constraint firstItem="MPp-ZD-jJ6" firstAttribute="top" secondItem="pXI-5u-Lyo" secondAttribute="top" id="eBr-Al-7Iy"/>
+                                    <constraint firstItem="euG-2V-btr" firstAttribute="height" secondItem="zDQ-m5-v53" secondAttribute="height" id="g7K-II-uvj"/>
+                                    <constraint firstItem="MPp-ZD-jJ6" firstAttribute="height" secondItem="zDQ-m5-v53" secondAttribute="height" id="jHH-Mg-8h5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hlf-MP-y0R" secondAttribute="bottom" id="stv-6n-TLV"/>
+                                    <constraint firstItem="Hlf-MP-y0R" firstAttribute="width" secondItem="zDQ-m5-v53" secondAttribute="width" id="zDG-KY-QBR"/>
+                                    <constraint firstItem="zDQ-m5-v53" firstAttribute="width" secondItem="pXI-5u-Lyo" secondAttribute="width" multiplier="0.48" id="zPV-xM-Y5m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22745098039215686" green="0.0" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vY6-yP-lIo" secondAttribute="trailing" constant="10" id="8Uo-cZ-2dq"/>
+                            <constraint firstItem="yfP-Ts-w7C" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-10" id="R6C-4Q-dx0"/>
+                            <constraint firstItem="yfP-Ts-w7C" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-10" id="kwY-pu-n8P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pXI-5u-Lyo" secondAttribute="trailing" constant="40" id="lI2-M2-7BH"/>
+                            <constraint firstItem="vY6-yP-lIo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="nxp-Ud-WTW"/>
+                            <constraint firstItem="pXI-5u-Lyo" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rbM-BK-HRY"/>
+                            <constraint firstItem="pXI-5u-Lyo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="tT2-ZS-u7d"/>
+                            <constraint firstItem="pXI-5u-Lyo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uLi-gd-e0i"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -21,4 +100,10 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_border" width="400" height="400"/>
+        <image name="champagne" width="98" height="100"/>
+        <image name="lightning" width="58" height="100"/>
+        <image name="space" width="94" height="100"/>
+    </resources>
 </document>

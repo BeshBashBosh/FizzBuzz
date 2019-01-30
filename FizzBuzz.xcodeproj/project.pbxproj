@@ -108,14 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				ED6D4BB321F88D3A00F847FF /* Extensions */,
-				ED6D4BAA21F7BE4F00F847FF /* Logic */,
+				ED6D4BAA21F7BE4F00F847FF /* Models */,
 				ED6D4B7321F7B48900F847FF /* AppDelegate.swift */,
 				ED6D4B7521F7B48900F847FF /* ViewController.swift */,
 				ED6D4B7721F7B48900F847FF /* Main.storyboard */,
 				ED6D4B7A21F7B48E00F847FF /* Assets.xcassets */,
 				ED6D4B7C21F7B48E00F847FF /* LaunchScreen.storyboard */,
 				ED6D4B7F21F7B48E00F847FF /* Info.plist */,
-				ED6D4BAF21F87B2900F847FF /* Game.swift */,
 			);
 			path = FizzBuzz;
 			sourceTree = "<group>";
@@ -140,12 +139,13 @@
 			path = FizzBuzzUITests;
 			sourceTree = "<group>";
 		};
-		ED6D4BAA21F7BE4F00F847FF /* Logic */ = {
+		ED6D4BAA21F7BE4F00F847FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				ED6D4BAB21F7BE6A00F847FF /* Brain.swift */,
+				ED6D4BAF21F87B2900F847FF /* Game.swift */,
 			);
-			path = Logic;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ED6D4BB321F88D3A00F847FF /* Extensions */ = {
