@@ -16,12 +16,7 @@ struct Game {
     mutating func play(move: String) -> Bool {
         self.score += 1
         let correctMove = brain.playFizzBuzz(with: self.score)
-        
-        if move == correctMove {
-            return true
-        } else {
-            return false
-        }
+        return move == correctMove
     }
     
 }
