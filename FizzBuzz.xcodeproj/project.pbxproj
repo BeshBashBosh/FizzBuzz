@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ED1DAA3322020FCD0006DCDF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DAA3222020FCD0006DCDF /* ViewControllerTests.swift */; };
 		ED6D4B7421F7B48900F847FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4B7321F7B48900F847FF /* AppDelegate.swift */; };
 		ED6D4B7621F7B48900F847FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4B7521F7B48900F847FF /* ViewController.swift */; };
 		ED6D4B7921F7B48900F847FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6D4B7721F7B48900F847FF /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ED1DAA3222020FCD0006DCDF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		ED6D4B7021F7B48900F847FF /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6D4B7321F7B48900F847FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED6D4B7521F7B48900F847FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				ED6D4BA321F7B59300F847FF /* BrainTests.swift */,
 				ED6D4BAD21F874E800F847FF /* GameTests.swift */,
 				ED6D4BB121F88D2700F847FF /* IntExtensionTests.swift */,
+				ED1DAA3222020FCD0006DCDF /* ViewControllerTests.swift */,
 			);
 			path = FizzBuzzTests;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			files = (
 				ED6D4BA421F7B59300F847FF /* BrainTests.swift in Sources */,
 				ED6D4BB221F88D2700F847FF /* IntExtensionTests.swift in Sources */,
+				ED1DAA3322020FCD0006DCDF /* ViewControllerTests.swift in Sources */,
 				ED6D4BAE21F874E800F847FF /* GameTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
