@@ -40,7 +40,7 @@ class GameTests: XCTestCase {
         let scoreAtBeginning = sut.score
         
         _ = sut.play(move: "1")
-        _ = sut.play(move: "1")
+        _ = sut.play(move: "2")
         let scoreAfterPlayingTwice = sut.score
         
         XCTAssertEqual(scoreAfterPlayingTwice, scoreAtBeginning + 2, "Score before playing is \(scoreAtBeginning). Score after playing twice should be \(scoreAtBeginning + 2), score is \(scoreAfterPlayingTwice)")
@@ -113,4 +113,20 @@ class GameTests: XCTestCase {
         XCTAssertEqual(result, false, "On playing '15' when next score will be \(sut.score) should be incorrect, result is \(result)")
     }
     
+    func test_IfMoveOfFizzIsWrong_ScoreNotIncreased_WithBrainFactorsThreeFive() {
+        sut.score = 1
+        let startScore = sut.score
+        let _ = sut.play(move: "Fizz")
+        print(sut.score)
+        print(startScore)
+        XCTAssertEqual(sut.score, startScore, "On playing Fizz on no multiple of brain 3,5, score should not be incremented. Score should be \(startScore), score is \(sut.score)")
+    }
+    
+    func test_IfMoveOfFizzIsCorrect_ScoreIncreasedByOne_WithBrainFactorsThreeFive() {
+        sut.score = 2
+        let startScore = sut.score
+        let _ = sut.play(move: "Fizz")
+        
+        XCTAssertEqual(sut.score, startScore + 1, "On playing Fizz on multiple of brain 3,5, score should incremented. Score should be \(startScore + 1), score is \(sut.score)")
+    }
 }

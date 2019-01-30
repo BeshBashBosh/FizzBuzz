@@ -14,9 +14,14 @@ struct Game {
     private let brain: Brain = Brain(factor: 3, secondFactor: 5)
     
     mutating func play(move: String) -> Bool {
-        self.score += 1
-        let correctMove = brain.playFizzBuzz(with: self.score)
-        return move == correctMove
+        let correctMove = brain.playFizzBuzz(with: self.score + 1)
+        
+        if move == correctMove {
+            self.score += 1
+            return true
+        }
+        
+        return false
     }
     
 }
