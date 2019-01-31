@@ -21,11 +21,17 @@ class ViewControllerTests: XCTestCase {
         UIApplication.shared.keyWindow!.rootViewController = viewController
         
         XCTAssertNotNil(viewController.view, "ViewController not initialised for testing")
-        let _ = viewController.view
     }
 
     override func tearDown() {
     }
 
-
+    func test_Move1_IncrementsGameScoreTo1() {
+        let move = "1"
+        
+        viewController.play(move: move)
+        let newScore = viewController.gameScore
+        
+        XCTAssertEqual(newScore, 1, "After playing '\(move)`, score should be 1, score is \(newScore)")
+    }
 }
