@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var numberButton: UIButton!
+    @IBOutlet weak var fizzButton: UIButton!
     
     // MARK: - Properties
     var game: Game?
@@ -40,8 +41,13 @@ class ViewController: UIViewController {
     }
     
     // MARK: - Actions
-    @IBAction func numberButtonTapped(_ sender: UIButton) {
-        play(move: .number)
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        switch sender {
+        case numberButton: play(move: .number)
+        case fizzButton: play(move: .fizz)
+        default:
+            return
+        }
     }
     
 }

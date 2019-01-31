@@ -47,5 +47,17 @@ class ViewControllerUITests: XCTestCase {
         
         XCTAssertEqual(newLabel, "2", "Number button should read '2' after being tapped twice from start, reads \(newLabel)")
     }
+    
+    func test_TapFizzButtonPressed_WhenNumberButtonIsValuePrecedingMultipleOf3_UpdateNumberButton() {
+        let numberButton = app.buttons["numberButton"]
+        let fizzButton = app.buttons["fizzButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        let newLabel = numberButton.label
+        
+        XCTAssertEqual(newLabel, "3", "Number button should raed '4' after start game and pressing number twice, the fizz button, reads \(newLabel)")
+    }
 
 }
