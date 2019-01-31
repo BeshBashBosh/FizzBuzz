@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED1DAA3322020FCD0006DCDF /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DAA3222020FCD0006DCDF /* ViewControllerTests.swift */; };
 		ED1DAA3522035DBB0006DCDF /* ViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DAA3422035DBB0006DCDF /* ViewControllerUITests.swift */; };
+		ED1DAA3722036BC20006DCDF /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1DAA3622036BC20006DCDF /* Move.swift */; };
 		ED6D4B7421F7B48900F847FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4B7321F7B48900F847FF /* AppDelegate.swift */; };
 		ED6D4B7621F7B48900F847FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED6D4B7521F7B48900F847FF /* ViewController.swift */; };
 		ED6D4B7921F7B48900F847FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED6D4B7721F7B48900F847FF /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		ED1DAA3222020FCD0006DCDF /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		ED1DAA3422035DBB0006DCDF /* ViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerUITests.swift; sourceTree = "<group>"; };
+		ED1DAA3622036BC20006DCDF /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		ED6D4B7021F7B48900F847FF /* FizzBuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FizzBuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6D4B7321F7B48900F847FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED6D4B7521F7B48900F847FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				ED6D4BAB21F7BE6A00F847FF /* Brain.swift */,
 				ED6D4BAF21F87B2900F847FF /* Game.swift */,
+				ED1DAA3622036BC20006DCDF /* Move.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				ED6D4B7621F7B48900F847FF /* ViewController.swift in Sources */,
 				ED6D4BAC21F7BE6A00F847FF /* Brain.swift in Sources */,
 				ED6D4B7421F7B48900F847FF /* AppDelegate.swift in Sources */,
+				ED1DAA3722036BC20006DCDF /* Move.swift in Sources */,
 				ED6D4BB021F87B2900F847FF /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
