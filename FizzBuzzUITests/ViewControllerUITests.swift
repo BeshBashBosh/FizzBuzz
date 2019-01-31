@@ -11,10 +11,18 @@ import XCTest
 class ViewControllerUITests: XCTestCase {
 
     var app: XCUIApplication!
+    var numberButton: XCUIElement!
+    var fizzButton: XCUIElement!
+    var buzzButton: XCUIElement!
+    var fizzBuzzButton: XCUIElement!
     
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         app = XCUIApplication()
+        numberButton = app.buttons["numberButton"]
+        fizzButton = app.buttons["fizzButton"]
+        buzzButton = app.buttons["buzzButton"]
+        fizzBuzzButton = app.buttons["fizzBuzzButton"]
         
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
@@ -30,8 +38,6 @@ class ViewControllerUITests: XCTestCase {
     }
     
     func test_TapNumberButton_NumberButtonLabelChangesTo1() {
-        let numberButton = app.buttons["numberButton"]
-        
         numberButton.tap()
         let newLabel = numberButton.label
         
@@ -39,8 +45,6 @@ class ViewControllerUITests: XCTestCase {
     }
     
     func test_TapNumberButtonTwice_NumberButtonLabelChangesTo2() {
-        let numberButton = app.buttons["numberButton"]
-        
         numberButton.tap()
         numberButton.tap()
         let newLabel = numberButton.label
@@ -48,16 +52,49 @@ class ViewControllerUITests: XCTestCase {
         XCTAssertEqual(newLabel, "2", "Number button should read '2' after being tapped twice from start, reads \(newLabel)")
     }
     
-    func test_TapFizzButtonPressed_WhenNumberButtonIsValuePrecedingMultipleOf3_UpdateNumberButton() {
-        let numberButton = app.buttons["numberButton"]
-        let fizzButton = app.buttons["fizzButton"]
-        
+    func test_TapFizzButton_WhenNumberButtonIsValuePrecedingMultipleOf3_UpdateNumberButton() {
         numberButton.tap()
         numberButton.tap()
         fizzButton.tap()
         let newLabel = numberButton.label
         
-        XCTAssertEqual(newLabel, "3", "Number button should raed '4' after start game and pressing number twice, the fizz button, reads \(newLabel)")
+        XCTAssertEqual(newLabel, "3", "Number button should read '4' after start game and pressing number twice, the fizz button, reads \(newLabel)")
+    }
+    
+    func test_TapBuzzButton_WhenNumberButtonIsValuePrecedingMultipleOf5_UpdateNumberButton() {
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        let newLabel = numberButton.label
+        
+        XCTAssertEqual(newLabel, "5", "Number button should read '6' after start game and reaching next number being first multiple of 5 then pressing buzz button, reads \(newLabel)")
+    }
+    
+    func test_TapFizzBuzzButton_WhenNumberButtonPrecedesMultipleOf3AND5_UpdateNumberButton() {
+        playTo14()
+        fizzBuzzButton.tap()
+        let newLabel = numberButton.label
+        
+        XCTAssertEqual(newLabel, "15", "Number button should read '15' after start game and reaching next number being first multiple of 3 AND 5 then pressing fizzbuzz button, reads \(newLabel)")
+    }
+    
+    private func playTo14() {
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        buzzButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        buzzButton.tap()
+        numberButton.tap()
+        fizzButton.tap()
+        numberButton.tap()
+        numberButton.tap()
     }
 
 }
