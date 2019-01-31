@@ -10,11 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var game: Game?
     var gameScore: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        game = Game()
     }
 
     func play(move: String) {

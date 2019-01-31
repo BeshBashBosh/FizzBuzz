@@ -26,6 +26,10 @@ class ViewControllerTests: XCTestCase {
     override func tearDown() {
     }
 
+    func test_ViewController_hasAGame() {
+        XCTAssertNotNil(viewController.game, "ViewController does not have a game initialised")
+    }
+    
     func test_Move1_IncrementsGameScoreTo1() {
         let move = "1"
         
@@ -45,4 +49,5 @@ class ViewControllerTests: XCTestCase {
         
         XCTAssertEqual(newScore, 2, "After playing move 1 '\(move1)', and move 2 '\(move2)', score should 2, score is \(newScore)")
     }
+    
 }
