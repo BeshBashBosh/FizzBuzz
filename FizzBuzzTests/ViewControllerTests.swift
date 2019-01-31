@@ -58,7 +58,7 @@ class ViewControllerTests: XCTestCase {
         viewController.play(move: move)
         let newScore = viewController.gameScore
         
-        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 3, new score should be \(oldScore ?? 0 + 1), new score is \(newScore)")
+        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 3, new score should be \((oldScore ?? 0) + 1), new score is \(newScore)")
     }
     
     func test_MoveBuzz_IncrementsScoreWhenCorrect() {
@@ -69,7 +69,7 @@ class ViewControllerTests: XCTestCase {
         viewController.play(move: move)
         let newScore = viewController.gameScore
         
-        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 5, new score should be \(oldScore ?? 0 + 1), new score is \(newScore)")
+        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 5, new score should be \((oldScore ?? 0) + 1), new score is \(newScore)")
     }
     
     func test_MoveFizzBuzz_IncrementsScoreWhenCorrect() {
@@ -80,7 +80,40 @@ class ViewControllerTests: XCTestCase {
         viewController.play(move: move)
         let newScore = viewController.gameScore
         
-        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 3 and 5, new score should be \(oldScore ?? 0 + 1), new score is \(newScore)")
+        XCTAssertEqual(newScore, (oldScore ?? 0) + 1, "On playing '\(move)' when next value up from \(oldScore) is multiple of 3 and 5, new score should be \((oldScore ?? 0) + 1), new score is \(newScore)")
+    }
+    
+    func test_MoveFizz_DoesNotIncrementsScore_WhenIncorrect() {
+        viewController.game?.score = 1
+        let move = "Fizz"
+        
+        let oldScore = viewController.game?.score
+        viewController.play(move: move)
+        let newScore = viewController.gameScore
+        
+        XCTAssertEqual(newScore, (oldScore ?? 0), "On playing '\(move)' when next value up from \(oldScore) is not a multiple of 3, new score should be \(oldScore ?? 0), new score is \(newScore)")
+    }
+    
+    func test_MoveBuzz_DoesNotIncrementsScore_WhenIncorrect() {
+        viewController.game?.score = 3
+        let move = "Buzz"
+        
+        let oldScore = viewController.game?.score
+        viewController.play(move: move)
+        let newScore = viewController.gameScore
+        
+        XCTAssertEqual(newScore, (oldScore ?? 0), "On playing '\(move)' when next value up from \(oldScore) is not a multiple of 5, new score should be \(oldScore ?? 0), new score is \(newScore)")
+    }
+    
+    func test_MoveFizzBuzz_DoesNotIncrementsScore_WhenIncorrect() {
+        viewController.game?.score = 13
+        let move = "FizzBuzz"
+        
+        let oldScore = viewController.game?.score
+        viewController.play(move: move)
+        let newScore = viewController.gameScore
+        
+        XCTAssertEqual(newScore, (oldScore ?? 0), "On playing '\(move)' when next value up from \(oldScore) is not a multiple of 3 and 5, new score should be \(oldScore ?? 0), new score is \(newScore)")
     }
     
 }
