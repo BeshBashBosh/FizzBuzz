@@ -24,7 +24,7 @@ class BrainTests: XCTestCase {
         let sut = Brain(factor: factor1, secondFactor: factor2)
         
         let result = sut.playFizzBuzz(with: multiple)
-        XCTAssertEqual(result, "Fizz", "\(multiple) is a multiple of firstFactor \(factor1) and should say Fizz, says \(result)")
+        XCTAssertEqual(result, Move.fizz, "\(multiple) is a multiple of firstFactor \(factor1) and should say Fizz, says \(result)")
     }
     
     func testBrainSaysBuzzWhenThreeIsOnlyAMultipleOfSecondFactor() {
@@ -34,7 +34,7 @@ class BrainTests: XCTestCase {
         let sut = Brain(factor: factor1, secondFactor: factor2)
         
         let result = sut.playFizzBuzz(with: multiple)
-        XCTAssertEqual(result, "Buzz", "\(multiple) is a multiple of secondFactor \(factor2) and should say Buzz, says \(result)")
+        XCTAssertEqual(result, Move.buzz, "\(multiple) is a multiple of secondFactor \(factor2) and should say Buzz, says \(result)")
     }
     
     func testBrainSaysFizzBuzzWhen15IsAMultipleOfFirstAndSecondFactor() {
@@ -45,7 +45,7 @@ class BrainTests: XCTestCase {
         
         let result = sut.playFizzBuzz(with: multiple)
         
-        XCTAssertEqual(result, "FizzBuzz", "\(multiple) is a multiple of firstFactor \(factor1) and secondFactor \(factor2) and should say FizzBuzz, says \(result)")
+        XCTAssertEqual(result, Move.fizzBuzz, "\(multiple) is a multiple of firstFactor \(factor1) and secondFactor \(factor2) and should say FizzBuzz, says \(result)")
     }
     
     func testBrainSaysMultipleWhenNotAThreeAndFiveAreNotFactors() {
@@ -56,7 +56,7 @@ class BrainTests: XCTestCase {
         
         let result = sut.playFizzBuzz(with: multiple)
         
-        XCTAssertEqual(result, String(multiple), "\(multiple) is not a multiple of firstFactor \(factor1) or secondFactor \(factor2) so should say \(multiple), says \(result)")
+        XCTAssertEqual(result, Move.number, "\(multiple) is not a multiple of firstFactor \(factor1) or secondFactor \(factor2) so should say \(multiple), says \(result)")
     }
     
     func testPlayingFizzBuzzWithEqualFactorsHasBrainSayingTheMultiple() {
@@ -67,7 +67,7 @@ class BrainTests: XCTestCase {
         
         let result = sut.playFizzBuzz(with: multiple)
         
-        XCTAssertEqual(result, String(multiple))
+        XCTAssertEqual(result, Move.number)
     }
 
 }

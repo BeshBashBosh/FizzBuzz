@@ -19,19 +19,19 @@ struct Brain {
     }
     
     // MARK: - Public API    
-    func playFizzBuzz(with value: Int) -> String {
+    func playFizzBuzz(with value: Int) -> Move {
         if self.factor == self.secondFactor {
-            return String(value)
+            return .number
         }
         
         if value.isMultiple(of: self.factor) && value.isMultiple(of: self.secondFactor) {
-            return "FizzBuzz"
+            return .fizzBuzz
         } else if value.isMultiple(of: self.factor) {
-            return "Fizz"
+            return .fizz
         } else if value.isMultiple(of: self.secondFactor) {
-            return "Buzz"
+            return .buzz
         } else {
-            return String(value)
+            return .number
         }
     }
 }

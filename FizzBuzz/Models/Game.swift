@@ -13,7 +13,7 @@ struct Game {
     var score: Int = 0
     private let brain: Brain = Brain(factor: 3, secondFactor: 5)
     
-    mutating func play(move: String) -> (isCorrectAnswer: Bool, score: Int) {
+    mutating func play(move: Move) -> (isCorrectAnswer: Bool, score: Int) {
         let correctMove = brain.playFizzBuzz(with: self.score + 1)
         
         if move == correctMove {

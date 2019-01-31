@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     }
 
     // MARK: - API
-    func play(move: String) {
+    func play(move: Move) {
         guard game != nil else {
             print("Game not initialised")
             return
@@ -41,13 +41,7 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        guard let currentScore = gameScore else {
-            print("GameScore is nil")
-            return
-        }
-        
-        let nextScore = currentScore + 1
-        play(move: "\(nextScore)")
+        play(move: .number)
     }
     
 }
