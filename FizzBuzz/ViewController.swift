@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     var game: Game?
     var gameScore: Int? {
         didSet {
-            numberButton.setTitle("1", for: .normal)
+            numberButton.setTitle("\(gameScore ?? 0)", for: .normal)
         }
     }
     
@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         game = Game()
+        gameScore = game?.score
     }
 
     // MARK: - API
@@ -40,7 +41,13 @@ class ViewController: UIViewController {
     
     // MARK: - Actions
     @IBAction func numberButtonTapped(_ sender: UIButton) {
-        play(move: "1")
+        guard let currentScore = gameScore else {
+            print("GameScore is nil")
+            return
+        }
+        
+        let nextScore = currentScore + 1
+        play(move: "\(nextScore)")
     }
     
 }
