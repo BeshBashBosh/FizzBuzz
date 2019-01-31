@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     }
 
     func play(move: String) {
+        gameScore = 1
     }
     
 }
