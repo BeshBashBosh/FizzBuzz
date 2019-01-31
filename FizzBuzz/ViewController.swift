@@ -19,7 +19,12 @@ class ViewController: UIViewController {
     }
 
     func play(move: String) {
-        gameScore = 1
+        guard game != nil else {
+            print("Game not initialised")
+            return
+        }
+        
+        let newScore = game?.play(move: "1")
     }
     
 }
