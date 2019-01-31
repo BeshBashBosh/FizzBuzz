@@ -49,7 +49,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfFizzReturnsTrueWhenNextScoreIsMultipleOfBrainFactorsThreeFive() {
         sut.score = 2
         
-        let result = sut.play(move: "Fizz")
+        let result = sut.play(move: "Fizz").isCorrectAnswer
         print(sut.score)
         
         XCTAssertEqual(result, true, "On playing Fizz when next score will be \(sut.score) should be correct, result is \(result)")
@@ -58,7 +58,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfFizzReturnsFalseWhenNextScoreIsNotMultipleOfBrainFactorsThreeFive() {
         sut.score = 1
         
-        let result = sut.play(move: "Fizz")
+        let result = sut.play(move: "Fizz").isCorrectAnswer
         
         XCTAssertEqual(result, false, "On playing Fizz when next score will be \(sut.score) should be incorrect, result is \(result)")
     }
@@ -66,7 +66,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfBuzzReturnsTrueWhenNextScoreIsMultipleOfBrainFactorsThreeFive() {
         sut.score = 4
         
-        let result = sut.play(move: "Buzz")
+        let result = sut.play(move: "Buzz").isCorrectAnswer
         
         XCTAssertEqual(result, true, "On playing Buzz when next score will be \(sut.score) should be correct, result is \(result)")
     }
@@ -74,7 +74,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfBuzzReturnsFalseWhenNextScoreIsNotMultipleOfBrainFactorsThreeFive() {
         sut.score = 5
         
-        let result = sut.play(move: "Buzz")
+        let result = sut.play(move: "Buzz").isCorrectAnswer
         
         XCTAssertEqual(result, false, "On playing Buzz when next score will be \(sut.score) should be incorrect, result is \(result)")
     }
@@ -82,7 +82,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfFizzBuzzReturnsTrueWhenNextScoreIsMultipleOfBrainFactorsThreeFive() {
         sut.score = 14
         
-        let result = sut.play(move: "FizzBuzz")
+        let result = sut.play(move: "FizzBuzz").isCorrectAnswer
         
         XCTAssertEqual(result, true,
                     "On playing FizzBuzz when next score will be \(sut.score), a multiple of 3 and 5, should be correct, result is \(result)")
@@ -91,7 +91,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfFizzBuzzReturnsFalseWhenNextScoreIsNotMultipleOfBrainFactorsThreeFive() {
         sut.score = 13
         
-        let result = sut.play(move: "FizzBuzz")
+        let result = sut.play(move: "FizzBuzz").isCorrectAnswer
         
         XCTAssertEqual(result, false,
                     "On playing FizzBuzz when next score will be \(sut.score), not a multiple of 3 and 5, should be incorrect, result is \(result)")
@@ -100,7 +100,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfNumberBuzzReturnsTrueWhenNextScoreIsNotMultipleOfBrainFactorsThreeFive() {
         sut.score = 6
         
-        let result = sut.play(move: "7")
+        let result = sut.play(move: "7").isCorrectAnswer
         
         XCTAssertEqual(result, true, "On playing '5' when next score will be \(sut.score) should be correct, result is \(result)")
     }
@@ -108,7 +108,7 @@ class GameTests: XCTestCase {
     func testIfPlayOfNumberReturnsFalseWhenNextScoreIsMultipleOfBrainFactorsThreeFive() {
         sut.score = 14
         
-        let result = sut.play(move: "15")
+        let result = sut.play(move: "15").isCorrectAnswer
         
         XCTAssertEqual(result, false, "On playing '15' when next score will be \(sut.score) should be incorrect, result is \(result)")
     }
