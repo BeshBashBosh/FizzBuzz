@@ -13,15 +13,15 @@ struct Game {
     var score: Int = 0
     private let brain: Brain = Brain(factor: 3, secondFactor: 5)
     
-    mutating func play(move: String) -> Bool {
+    mutating func play(move: String) -> (correctAnswer: Bool, score: Int) {
         let correctMove = brain.playFizzBuzz(with: self.score + 1)
         
         if move == correctMove {
             self.score += 1
-            return true
+            return (true, self.score)
         }
         
-        return false
+        return (false, self.score)
     }
     
 }
