@@ -24,7 +24,8 @@ class ViewController: UIViewController {
             return
         }
         
-        let newScore = game?.play(move: "1")
+        let playResponse = game?.play(move: move)
+        gameScore = playResponse?.score
     }
     
 }
